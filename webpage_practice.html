@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webpage</title>
+</head>
+
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+
+    button {
+        background-color: rgb(55, 55, 204);
+        border: none;
+        border-radius: 10px;
+        height: 40px;
+        width: 150px;
+        color: white;
+        box-shadow: 5px 5px 10px rgb(37, 36, 36);
+        margin-top: 10px;
+    }
+
+    button:hover {
+        background-color: rgb(12, 12, 98);
+    }
+
+    .nav {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 10vh;
+        background-color: rgb(10, 61, 61);
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: medium;
+        position: fixed;
+        width: 100vw;
+        top: 0;
+        z-index: 1;
+        color: #fff;
+    }
+
+    .nav .image {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .nav .image img {
+
+        height: 60px;
+        width: 60px;
+    }
+
+    .tags {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .tags a {
+        padding: 15px;
+        /* margin-right: 20px; */
+        color: #fff;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    .tags a:hover {
+        color: white;
+    }
+
+    #nav_button1 {
+        background-color: white;
+        border: none;
+        border-radius: 8px;
+        margin: 0 10px;
+        height: 30px;
+        width: 100px;
+        box-shadow: 5px 5px 10px rgb(37, 36, 36);
+    }
+
+    #nav_button1:hover {
+        background-color: rgb(135, 140, 144);
+        color: white;
+        cursor: pointer;
+    }
+
+    #nav_button2 {
+        background-color: rgb(55, 55, 204);
+        border: none;
+        border-radius: 8px;
+        color: white;
+        height: 30px;
+        width: 100px;
+        box-shadow: 5px 5px 10px rgb(37, 36, 36);
+    }
+
+    #nav_button2:hover {
+        background-color: rgb(16, 16, 100);
+        cursor: pointer;
+    }
+
+    .data1 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 15vh 20px;
+        /* border: 2px solid black; */
+
+    }
+
+    .text1 {
+        display: block;
+        justify-content: center;
+        text-align: center;
+        font-size: x-large;
+        margin: auto 50px;
+        position: relative;
+        left: 30px;
+    }
+
+    .data1_image {
+        display: flex;
+        align-items: center;
+        /* position: relative;*/
+    }
+
+    .data1_image img {
+        /* height: 70vh; */
+        width: 50vw;
+        /* position: relative; */
+        /* left: 20%; */
+    }
+
+    .gradiant {
+        position: relative;
+        right: 100px;
+    }
+
+
+
+    /* .text1 button {
+        margin-top: 10px;
+        background-color: rgb(55, 55, 204);
+        border: none;
+        border-radius: 10px;
+        height: 40px;
+        width: 150px;
+        color: white;
+        box-shadow: 5px 5px 10px rgb(37, 36, 36);
+    } */
+
+    .text1 button:hover {
+        cursor: pointer;
+        background-color: rgb(16, 16, 100);
+    }
+
+    .circle1 {
+        height: 300px;
+        width: 300px;
+        border-radius: 150px;
+        background: linear-gradient(to top left, #c8ded7, #e67878);
+        z-index: -1;
+        position: relative;
+        right: 50%;
+    }
+
+    .circle2 {
+        height: 300px;
+        width: 300px;
+        border-radius: 150px;
+        background: linear-gradient(to top left, #c8ded7, #e67878);
+        z-index: -1;
+        position: relative;
+        right: 50%;
+    }
+
+    .companies {
+        text-align: center;
+        margin: 10vh;
+    }
+
+    .companies p {
+        font-size: x-large;
+    }
+
+    .companies_data {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+
+    }
+
+    .companies_data img {
+        margin-top: 10px;
+        width: 200px;
+        object-fit: contain;
+        height: 100px;
+    }
+
+    .userResearch {
+        background-color: #ecf8f4;
+        /* border: 2px solid black; */
+        /* height: 60vh; */
+    }
+
+    .userResearch .heading {
+        display: block;
+        padding: 40px;
+        text-align: center;
+    }
+
+    .userResearch .cards {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        text-align: center;
+        flex-wrap: wrap;
+        gap: 35px;
+        /* margin-bottom: 0px; */
+    }
+
+    .card_border {
+        justify-content: space-around;
+        margin-top: 10px;
+        height: 250px;
+
+
+    }
+
+    .card_border img {
+        margin-top: 10px;
+        height: 10vh;
+    }
+
+    .example_cards {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        align-items: center;
+        text-align: center;
+        background: linear-gradient(rgb(0, 0, 0, .1), rgb(0, 0, 0, .8));
+    }
+
+    .example_border {
+        position: relative;
+        height: 300px;
+        width: 200px;
+        margin: 20px;
+        border-radius: 5px;
+        background: linear-gradient(rgb(0, 0, 0, .1), rgb(0, 0, 0, .8));
+        position: relative;
+    }
+
+    .nature_tag {
+        background: linear-gradient(rgb(0, 0, 0, .1), rgb(0, 0, 0, .8));
+        position: absolute;
+        color: white;
+        text-decoration: none;
+        bottom: 0;
+        /* right: 40px; */
+    }
+
+    .card_1 {
+        background-image: url("https://images.pexels.com/photos/52526/sign-places-travel-information-52526.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+        background-size: cover;
+    }
+
+    .card_2 {
+        background-image: url("https://images.pexels.com/photos/2009968/pexels-photo-2009968.jpeg?auto=compress&cs=tinysrgb&w=600");
+        background-size: cover;
+    }
+
+    .card_3 {
+        background-image: url("https://images.pexels.com/photos/1827215/pexels-photo-1827215.jpeg?auto=compress&cs=tinysrgb&w=600");
+        background-size: cover;
+    }
+
+    .card_4 {
+        background-image: url("https://images.pexels.com/photos/3714900/pexels-photo-3714900.jpeg?auto=compress&cs=tinysrgb&w=600");
+        background-size: cover;
+    }
+
+    .end {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        background-color: rgb(9, 50, 44);
+    }
+
+    .end .end_class {
+        color: white;
+        margin: 30px;
+    }
+
+    .end_class h1,
+    p {
+        padding: 20px;
+    }
+
+    .footer_lists {
+        display: flex;
+        justify-content: space-around;
+        gap: 65px;
+        align-items: center;
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 5vh;
+    }
+
+    .footer_lists,
+    li {
+        padding: 10px;
+        list-style-type: none;
+    }
+
+    .footer_image img {
+        height: 70px;
+    }
+
+    .flexfoot {
+        display: flex;
+        align-items: center;
+    }
+
+    .lists a {
+        color: #000;
+        text-decoration: none;
+    }
+
+    .base {
+        background-color: black;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* position: fixed; */
+        bottom: 0;
+        /* width: 100vw; */
+        height: 5vh;
+    }
+
+    .last a {
+        margin-right: 50px;
+        color: white;
+        text-decoration: none;
+    }
+</style>
+
+<body>
+
+    <section>
+        <div class="nav">
+            <div class="image">
+                <img src="https://cdn.pixabay.com/photo/2018/03/31/14/54/animals-3278317_1280.png" alt="Logo">Nothing
+                Hub</img>
+            </div>
+
+            <div class="tags">
+                <a href="#">Products</a>
+                <a href="#">Customers </a>
+                <a href="#">Pricing </a>
+                <a href="#">Resources</a>
+
+                <div class="button">
+                    <input type="submit" id="nav_button1" value="Sign in">
+                    <input type="submit" id="nav_button2" value="Sign up">
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section>
+        <div class="data1">
+            <div class="text1">
+                <h1>Design Confidently </h1>
+                <p>Hub is a remote user research platform that takes the guesswork out of design decision by validating
+                    them real users.</p>
+                <button>Get Started</button>
+            </div>
+            <div class="data1_image">
+                <img src="./PNGs/firm.png" alt="Community">
+                <div class="gradiant">
+                    <!-- <div class="circle1"></div> -->
+                    <!-- <div class="circle2"></div> -->
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+
+    <section>
+        <div class="companies">
+            <p>The world's best companes rely on Hub to make better design decisions.</p>
+            <div class="companies_data">
+                <div class="div1">
+                    <a href="https://www.google.com" target="_blank"> <img src="./PNGs/google.png"
+                            alt="google_logo"></a>
+                </div>
+                <div class="div2"><img src="./PNGs/meta.png" alt="meta_logo"></div>
+                <div class="div3"><img src="./PNGs/cocacola.png" alt="coca-cola_logo"></div>
+                <div class="div4"><img src="./PNGs/tesla.png" alt="tesla_logo"></div>
+                <div class="div5"><img src="./PNGs/samsung.png" alt="sa./msung_logo"></div>
+                <div class="div6"><img src="./PNGs/pngwing.com.png" alt="paytm_logo"></div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="userResearch">
+            <div class="heading">
+                <h1>Your User Research Swiss Army knife</h1>
+                <button>See all Features &#8594</button>
+            </div>
+            <div class="cards">
+                <div class="card1 card_border">
+                    <img src="./PNGs/strange.png" alt="dr_logo">
+                    <h1>Card Sorting</h1>
+                    <p>Discover how people group and label information.</p>
+                    <button>Learn More &#8594</button>
+                </div>
+                <div class="card2 card_border"><img src="./PNGs/strange.png" alt="logo">
+                    <h1>Prototype Tests</h1>
+                    <p>Discover how people group and label information.</p>
+                    <button>Learn More &#8594</button>
+                </div>
+                <div class="card3 card_border"><img src="./PNGs/strange.png" alt="logo">
+                    <h1>First Click Tests</h1>
+                    <p>Discover how people group and label information.</p>
+                    <button>Learn More &#8594</button>
+                </div>
+                <div class="card4 card_border"><img src="./PNGs/strange.png" alt="logo">
+                    <h1>Design Surveys</h1>
+                    <p>Discover how people group and label information.</p>
+                    <button>Learn More &#8594</button>
+                </div>
+                <div class="card5 card_border"><img src="./PNGs/strange.png" alt="logo">
+                    <h1>Preference Tests</h1>
+                    <p>Discover how people group and label information.</p>
+                    <button>Learn More &#8594</button>
+                </div>
+                <div class="card6 card_border"><img src="./PNGs/strange.png" alt="logo">
+                    <h1>FIve Second Tests</h1>
+                    <p>Discover how people group and label information.</p>
+                    <button>Learn More &#8594</button>
+                </div>
+
+            </div>
+
+
+        </div>
+    </section>
+
+    <section>
+        <div class="data1">
+
+            <div class="data1_image">
+                <img src="./PNGs/girl.png" alt="Community">
+                <div class="gradiant">
+                    <!-- <div class="circle1"></div> -->
+                    <!-- <div class="circle2"></div> -->
+                </div>
+            </div>
+
+            <div class="text1">
+                <h1>Design Confidently </h1>
+                <p>Hub is a remote user research platform that takes the guesswork out of design decision by validating
+                    them real users.</p>
+                <button>Get Started</button>
+            </div>
+
+        </div>
+
+
+    </section>
+
+    <section>
+        <div class="data1">
+            <div class="text1">
+                <h1>Design Confidently </h1>
+                <p>Hub is a remote user research platform that takes the guesswork out of design decision by validating
+                    them real users.</p>
+                <button>Get Started</button>
+            </div>
+            <div class="data1_image">
+                <img src="./PNGs/group.png" alt="Community">
+                <div class="gradiant">
+                    <!-- <div class="circle1"></div> -->
+                    <!-- <div class="circle2"></div> -->
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+
+    <section>
+        <div class="userResearch">
+            <div class="heading">
+                <h1>Our Platform, Endless Possibilities</h1>
+                <button>See more examples &#8594</button>
+            </div>
+            <div class="example_cards ">
+                <div class="card_1 example_border">
+                    <a href="#" class="nature_tag">
+                        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, voluptates.
+                        </h3>
+                    </a>
+                </div>
+
+                <div class="card_2 example_border ">
+                    <a href="#" class="nature_tag">
+                        <h3>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta, fuga?!</h3>
+                    </a>
+                </div>
+
+                <div class="card_3 example_border">
+                    <a href="#" class="nature_tag">
+                        <h3>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere, distinctio.</h3>
+                    </a>
+                </div>
+
+                <div class="card_4 example_border ">
+                    <a href="#" class="nature_tag">
+                        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, itaque.
+                        </h3>
+                    </a>
+                </div>
+
+            </div>
+
+
+        </div>
+    </section>
+
+    <section>
+        <div class="end">
+            <div class="end_class">
+                <h1>Start Testing Today</h1>
+                <p>Take the guesswork out of desing decisions</p>
+                <button>Get Started</button>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <footer>
+            <div class="footer_lists">
+                <div class="flexfoot">
+                    <div class="footer_image">
+                        <img src="https://cdn.pixabay.com/photo/2018/03/31/14/54/animals-3278317_1280.png"
+                            alt="Logo"></img>
+                    </div>
+                    <div class="footerLogo">
+                        <p>Nothing Hub</p>
+                    </div>
+                </div>
+
+                <div class="lists footer_lists">
+                    <div class="list1">
+                        <h3>Product</h3>
+                        <ul>
+                            <a href="#">
+                                <li>Overview</li>
+                                <li>Pricing</li>
+                                <li>Hub Portal</li>
+                                <li>Customers</li>
+                                <li>Status Page</li>
+                            </a>
+                        </ul>
+                    </div>
+                    <div class="list2">
+                        <h3>Methodology</h3>
+                        <ul>
+                            <a href="#">
+                                <li>Overview</li>
+                                <li>Pricing</li>
+                                <li>Hub Portal</li>
+                                <li>Customers</li>
+                                <li>Status Page</li>
+                            </a>
+                        </ul>
+                    </div>
+                    <div class="list3">
+                        <h3>Resources</h3>
+                        <ul>
+                            <a href="#">
+                                <li>Overview</li>
+                                <li>Pricing</li>
+                                <li>Hub Portal</li>
+                                <li>Customers</li>
+                                <li>Status Page</li>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </footer>
+    </section>
+
+    <footer>
+        <div class="base">
+            <div class="last">
+                <a href="#">Privacy</a>
+                <a href="#">Terms & Condition</a>
+                <a href="#">Security Information</a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
