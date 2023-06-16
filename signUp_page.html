@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-Up Page</title>
+</head>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .outer_box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        width: 100vw;
+        background: linear-gradient(to top left, #7fffd4, #000);
+        /* backdrop-filter: blur(14px); */
+
+    }
+
+    .container {
+        display: block;
+        width: 300px;
+        height: fit-content;
+        padding: 20px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        border-radius: 15px;
+        background-color: #f0ffff;
+        z-index: 1;
+    }
+
+    .container h1,
+    p {
+        margin: 4px;
+        background-color: azure;
+    }
+
+    .container p {
+        font-weight: 100;
+    }
+
+    .credentials {
+        margin-top: 10px;
+        background-color: azure;
+    }
+
+    .credentials label,
+    input {
+        display: block;
+        width: 100%;
+        margin-top: 4px;
+        background-color: azure;
+        padding: 5px;
+        font-weight: 400;
+        border-radius: 5px;
+    }
+
+    .confirm p,
+    a {
+        background-color: azure;
+        font-weight: 400;
+    }
+
+    a {
+        color: rgb(25, 25, 145);
+
+    }
+
+    #submit {
+        margin-top: 10px;
+        border-radius: 5px;
+        border: none;
+        background-color: rgb(20, 59, 214);
+        color: white;
+        height: 30px;
+        font-weight: bold;
+    }
+
+    #submit:hover {
+        background-color: rgb(25, 25, 145);
+    }
+
+    .c1 {
+        height: 200px;
+        width: 200px;
+        background: linear-gradient(to top right, rgb(13, 143, 163), rgb(171, 206, 30));
+        border-radius: 100px;
+        position: absolute;
+        top: 20px;
+        left: 470px;
+    }
+
+    .c2 {
+        height: 200px;
+        width: 200px;
+        background: linear-gradient(to top right, rgb(47, 185, 31), rgb(13, 143, 176));
+        border-radius: 100px;
+        position: absolute;
+        bottom: 20px;
+        right: 300px;
+    }
+</style>
+
+<body>
+    <div class="outer_box">
+        <div class="container ">
+            <h1>Signup</h1>
+            <p>It just takes 30 seconds</p>
+
+            <div class="credentials">
+                <form action="#">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" placeholder="Enter Your Name">
+
+
+                    <label for="email">Your Email</label>
+                    <input type="email" id="email" placeholder="Enter Your email">
+
+                    <label for="password">Your New Password </label>
+                    <input type="password" id="password" placeholder="Enter Your password">
+
+                    <input type="submit" id="submit" value="Create Account">
+                </form>
+
+                <div class="confirm">
+                    <p>Already here an Account?
+                        <a href="#">LogIn</a>
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="circle">
+        <div class="c1">
+        </div>
+        <div class="c2">
+        </div>
+    </div>
+</body>
+
+</html>

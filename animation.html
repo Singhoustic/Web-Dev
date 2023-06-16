@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js"></script>
+    <title>Animation</title>
+</head>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: black;
+        height: 100vh;
+        gap: 20px;
+
+        animation: ease;
+    }
+
+    .box {
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        background-color: blueviolet;
+        animation-name: bounce;
+        /* animation-duration: 1s; */
+        /* animation-iteration-count: infinite; */
+        animation-timing-function: ease-in-out;
+        animation-direction: alternate;
+        /* animation: bounce 1s ease-in-out infinite alternate; */
+    }
+
+    .box:nth-child(2) {
+        animation-delay: .1s;
+    }
+
+    .box:nth-child(3) {
+        animation-delay: .2s;
+    }
+
+    .box:nth-child(4) {
+        animation-delay: .3s;
+    }
+
+    @keyframes bounce {
+        0% {
+            transform: translateY(-50px);
+        }
+
+        100% {
+            transform: translateY(50px);
+        }
+
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+</body>
+
+</html>

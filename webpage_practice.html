@@ -16,6 +16,59 @@
         font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     }
 
+    .container {
+        /* font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 30px;
+        background: linear-gradient(rgba(7, 24, 7, 0.614), rgb(6, 31, 6));
+        /* height: 100vh; */
+        color: white;
+        padding: 15vh 0px 10vh 0px;
+    }
+
+    .left_text,
+    h1,
+    p {
+        align-items: center;
+        flex-basis: 30%;
+        margin: 20px;
+    }
+
+    .right_images {
+        display: grid;
+        flex-basis: 40%;
+        grid-template-columns: repeat(4, 1fr);
+        grid-auto-rows: 100px;
+    }
+
+    .box {
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 5px;
+        background-color: rgb(50, 76, 99);
+        background-blend-mode: overlay;
+        transition: all .5s ease-in-out;
+    }
+
+    .box:hover {
+        cursor: pointer;
+        background-color: rgba(65, 41, 0, 0);
+        background-position: top;
+    }
+
+    .row {
+        grid-row: span 3;
+    }
+
+    .col {
+        grid-column: span 2;
+    }
+
     button {
         background-color: rgb(55, 55, 204);
         border: none;
@@ -113,8 +166,7 @@
         align-items: center;
         justify-content: center;
         margin: 15vh 20px;
-        /* border: 2px solid black; */
-
+        position: relative;
     }
 
     .text1 {
@@ -145,19 +197,6 @@
         right: 100px;
     }
 
-
-
-    /* .text1 button {
-        margin-top: 10px;
-        background-color: rgb(55, 55, 204);
-        border: none;
-        border-radius: 10px;
-        height: 40px;
-        width: 150px;
-        color: white;
-        box-shadow: 5px 5px 10px rgb(37, 36, 36);
-    } */
-
     .text1 button:hover {
         cursor: pointer;
         background-color: rgb(16, 16, 100);
@@ -169,8 +208,8 @@
         border-radius: 150px;
         background: linear-gradient(to top left, #c8ded7, #e67878);
         z-index: -1;
-        position: relative;
-        right: 50%;
+        position: absolute;
+        right: 450px;
     }
 
     .circle2 {
@@ -179,7 +218,7 @@
         border-radius: 150px;
         background: linear-gradient(to top left, #c8ded7, #e67878);
         z-index: -1;
-        position: relative;
+        position: absolute;
         right: 50%;
     }
 
@@ -208,8 +247,7 @@
 
     .userResearch {
         background-color: #ecf8f4;
-        /* border: 2px solid black; */
-        /* height: 60vh; */
+        /* background: linear-gradient(rgba(7, 24, 7, 0.614), rgb(6, 31, 6)); */
     }
 
     .userResearch .heading {
@@ -232,8 +270,6 @@
         justify-content: space-around;
         margin-top: 10px;
         height: 250px;
-
-
     }
 
     .card_border img {
@@ -251,22 +287,21 @@
     }
 
     .example_border {
-        position: relative;
         height: 300px;
         width: 200px;
         margin: 20px;
         border-radius: 5px;
         background: linear-gradient(rgb(0, 0, 0, .1), rgb(0, 0, 0, .8));
-        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: end;
     }
 
     .nature_tag {
         background: linear-gradient(rgb(0, 0, 0, .1), rgb(0, 0, 0, .8));
-        position: absolute;
         color: white;
         text-decoration: none;
         bottom: 0;
-        /* right: 40px; */
     }
 
     .card_1 {
@@ -353,9 +388,74 @@
         color: white;
         text-decoration: none;
     }
+
+    @media screen and (max-width:1024px) {
+        .container {
+            flex-direction: column;
+            height: 100%;
+            padding: 40px;
+        }
+
+        .right_images {
+            grid-template-columns: repeat(1, 1fr);
+            width: 80vw;
+        }
+
+    }
 </style>
 
 <body>
+
+    <section>
+        <div class="container">
+
+            <div class="left_text">
+                <h1>I'm grid</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente aliquam nemo, voluptatum nobis
+                    ipsam
+                    mollitia perferendis perspiciatis nulla fuga. Culpa illum minima officia alias ex ipsam iure,
+                    doloremque
+                    quas. Nam?</p>
+            </div>
+
+            <div class="right_images">
+                <div class="box1 box col" style="background-image:url( https://images.unsplash.com/photo-1682685797507-d44d838b0ac7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80
+                    );">
+                    Camping
+                </div>
+
+                <div class="box6 box row col "
+                    style="background-image: url(https://images.unsplash.com/photo-1685491107139-7d7f4f17b3eb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxOTl8fHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=500&q=60);">
+                    Raccoon</div>
+
+                <div class="box3 box col"
+                    style="background-image: url(https://images.unsplash.com/photo-1685438436929-108c5050855d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw5NHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60);">
+                    Mountain</div>
+
+                <div class="box2 box row"
+                    style="background-image: url(https://images.unsplash.com/photo-1685747830471-aa5869d624f4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80);">
+                    Girls
+                </div>
+
+                <div class="box4 box row"
+                    style="background-image: url(https://images.unsplash.com/photo-1683009427590-dd987135e66c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxMTR8fHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=500&q=60);">
+                    Desert</div>
+
+                <div class="box8 box row col"
+                    style="background-image: url(https://images.unsplash.com/photo-1684999574712-e1b53b87b709?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyNDV8fHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=500&q=60);">
+                    Street
+                </div>
+
+                <div class="box5 box col"
+                    style="background-image: url(https://images.unsplash.com/photo-1682695796954-bad0d0f59ff1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxNzd8fHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=500&q=60);">
+                    Water</div>
+
+
+
+            </div>
+
+        </div>
+    </section>
 
     <section>
         <div class="nav">
@@ -390,10 +490,10 @@
             <div class="data1_image">
                 <img src="./PNGs/firm.png" alt="Community">
                 <div class="gradiant">
-                    <!-- <div class="circle1"></div> -->
-                    <!-- <div class="circle2"></div> -->
                 </div>
             </div>
+            <div class="circle1"></div>
+            <div class="circle2"></div>
         </div>
 
 

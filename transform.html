@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transform</title>
+</head>
+
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    .container {
+        background: tomato;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .box {
+        height: 400px;
+        width: 400px;
+        background: linear-gradient(rgb(187, 187, 216), rgb(28, 3, 3));
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 2s;
+        font-size: 2em;
+        /* transition-property: background, border-radius, transform; */
+    }
+
+
+    .box:hover {
+        background: linear-gradient(purple, maroon);
+        border-radius: 200px;
+        transform: rotate(360deg);
+        color: cadetblue;
+    }
+</style>
+
+<body>
+
+    <div class="container">
+        <div class="box">
+            <p>Hello Rohit!</p>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+    }
+
+    .nav {
+        width: 100%;
+        display: flex;
+        height: 50px;
+        padding: 5px;
+        background-color: black;
+        color: white;
+        justify-content: center;
+        font-size: 30px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        position: fixed;
+        top: 0;
+        z-index: 1;
+    }
+
+    .container {
+        display: flex;
+    }
+
+    .container1 {
+        height: 100vh;
+        width: 50%;
+        background-color: blue;
+        border: 2px solid blue;
+    }
+
+    .box1 {
+        border: 2px solid white;
+        width: 50%;
+        position: relative;
+        top: 100px;
+        left: 30%;
+        background-color: white;
+    }
+
+    .container2 {
+        height: 100vh;
+        width: 50%;
+        background-color: purple;
+        border: 2px solid purple;
+    }
+
+    .side_box2 {
+        border: 2px solid white;
+        background-color: white;
+        width: 30%;
+        position: relative;
+        top: 100px;
+        left: 40%;
+        height: 70vh;
+    }
+
+    .button {
+        background-color: green;
+        border: 2px solid green;
+        height: 100px;
+        width: 100px;
+        border-radius: 50px;
+        text-align: center;
+        /* justify-content: center; */
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        margin: 20px;
+    }
+
+    .foot {
+        width: 100%;
+        background-color: black;
+        text-align: center;
+        color: white;
+        position: fixed;
+        bottom: 0;
+    }
+</style>
+
+<body>
+    <div class="nav">
+        <div class="tags">
+            Home
+        </div>
+        <div class="tags">
+            About
+        </div>
+        <div class="tags">
+            Contact
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="container1 ">
+            <div class="box1">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores quaerat quia saepe ut natus.
+                    Assumenda quis temporibus repudiandae vel deserunt maxime, animi similique possimus ut repellendus
+                    nihil asperiores illum voluptates.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, perspiciatis optio. Labore
+                    necessitatibus eius incidunt, laboriosam, eligendi excepturi voluptatibus consequatur odio beatae,
+                    voluptas dicta veritatis! Tempora voluptatum, sunt maxime fuga magni ipsa veritatis esse debitis,
+                    laudantium sequi quisquam, excepturi non modi earum velit dolores at repudiandae. Facilis
+                    accusantium soluta commodi.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur dolorem nihil, voluptatem
+                    placeat impedit dolorum illum distinctio magnam maiores porro pariatur iste eum nostrum earum!
+                    Minima doloribus velit autem recusandae temporibus! Veritatis a, dolorum at explicabo esse enim non
+                    saepe incidunt illum perspiciatis nihil voluptatem quo rerum commodi alias minima et vel dolore
+                    eligendi sit quidem exercitationem delectus porro! Tempora nostrum quasi, dolores aperiam
+                    consequuntur, dolor ullam ratione obcaecati suscipit, minima architecto consectetur deserunt odit ea
+                    saepe unde? Ullam tempora fugit dolorum in, voluptatibus saepe ad iusto mollitia, fugiat, iure porro
+                    deserunt. Eius, repellendus. Nulla laborum in iusto incidunt ipsum.</p>
+            </div>
+        </div>
+
+        <div class="container2">
+            <div class="side_box2">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos accusamus soluta obcaecati iure
+                    doloremque, culpa fugiat laudantium libero, consequatur amet, itaque quam eaque labore perspiciatis
+                    tempora! Cum ullam minima iusto non nihil fuga, possimus aspernatur culpa quam error perferendis
+                    eius suscipit numquam perspiciatis, tenetur dolorem excepturi reprehenderit pariatur accusamus
+                    doloremque.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="button">
+        <h2>Click Here</h2>
+    </div>
+
+    <div class="foot">
+        <footer>
+            <h1>I'm Footer</h1>
+        </footer>
+    </div>
+</body>
+
+</html>
